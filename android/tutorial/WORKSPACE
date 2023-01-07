@@ -11,5 +11,6 @@ http_archive(
 load("@build_bazel_rules_android//android:rules.bzl", "android_sdk_repository")
 android_sdk_repository(
     name = "androidsdk",
-    path = "c:/Users/TEMP/AppData/Local/Android/sdk"
+    path = "c:/Users/TEMP.KENNETHMATHARI/AppData/Local/Android/Sdk"
     )
+
