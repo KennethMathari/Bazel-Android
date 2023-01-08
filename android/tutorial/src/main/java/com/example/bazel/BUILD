@@ -18,6 +18,8 @@ android_library(
 #            "@maven//:androidx_appcompat_appcompat",
             #"@maven//:androidx_core_core",
             "@maven//:androidx_cardview_cardview",
+            "@maven//:androidx_lifecycle_lifecycle_viewmodel",
+            "@maven//:androidx_lifecycle_lifecycle_livedata",
 #            "@maven//:com_google_android_material_material",
         ],
 )

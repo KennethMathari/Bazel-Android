@@ -31,8 +31,10 @@ maven_install(
         "androidx.test.espresso:espresso-core:3.4.0",
         "org.hamcrest:hamcrest-library:2.2",
         "androidx.cardview:cardview:1.0.0",
+        "androidx.lifecycle:lifecycle-viewmodel:2.5.1",
+        "androidx.lifecycle:lifecycle-livedata:2.5.1",
 #        "androidx.appcompat:appcompat:1.5.1",
-        #"androidx.core:core:1.9.0",
+#        "androidx.core:core:1.9.0",
 #        "com.google.android.material:material:1.6.1",
     ],
     repositories = [
