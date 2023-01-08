@@ -15,5 +15,9 @@ android_library(
     exports = [
             "@maven//:junit_junit",
             "@maven//:androidx_test_espresso_espresso_core",
+#            "@maven//:androidx_appcompat_appcompat",
+            #"@maven//:androidx_core_core",
+            "@maven//:androidx_cardview_cardview",
+#            "@maven//:com_google_android_material_material",
         ],
 )
