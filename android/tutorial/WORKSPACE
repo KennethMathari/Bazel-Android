@@ -39,12 +39,12 @@ maven_install(
         "https://repo1.maven.org/maven2",
         "https://jcenter.bintray.com",
     ],
-     #maven_install_json = "//src/main:maven_install.json",
+     maven_install_json = "//:maven_install.json",
     #use_credentials_from_home_netrc_file = True,
 )
 
-#load("@maven//:defs.bzl", "pinned_maven_install")
-#pinned_maven_install()
+load("@maven//:defs.bzl", "pinned_maven_install")
+pinned_maven_install()
 
 
 
