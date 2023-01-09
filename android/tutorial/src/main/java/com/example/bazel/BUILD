@@ -13,8 +13,8 @@ android_library(
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),
     exports = [
-            "@maven//:junit_junit",
-            "@maven//:androidx_test_espresso_espresso_core",
+#            "@maven//:junit_junit",
+#            "@maven//:androidx_test_espresso_espresso_core",
 #            "@maven//:androidx_appcompat_appcompat",
             #"@maven//:androidx_core_core",
             "@maven//:androidx_cardview_cardview",
