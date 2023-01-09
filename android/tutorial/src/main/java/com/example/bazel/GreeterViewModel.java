@@ -1,21 +1,17 @@
 package com.example.bazel;
 
-//create view model class with LiveData
-//public class GreeterViewModel extends ViewModel{
-//    Greeter greeter = new Greeter();
-//
-//    public String getGreeting() {
-//        return greeter.sayHello();
-//    }
-//}
-//public class GreeterViewModel extends ViewModel {
-//    private String greeting;
-//
-//    public GreeterViewModel(String greeting) {
-//        this.greeting = greeting;
-//    }
-//
-//    public String getGreeting() {
-//        return greeting;
-//    }
-//}
+public class GreeterViewModel extends ViewModel{
+    public MutableLiveData<String> greeting;
+
+    //get Greeting string from Greeter class
+    public MutableLiveData<String> getGreeting() {
+        Greeter greeter = new Greeter();
+
+        if(greeting == null){
+            greeting = new MutableLiveData<>();
+        }
+
+        //return greeting.setValue(greeter.sayHello());
+        return greeting.setValue("Kenneth Mathari!");
+    }
+}
