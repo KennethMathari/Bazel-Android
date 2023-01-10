@@ -12,13 +12,15 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 //    private GreeterViewModel greeterViewModel;
-    Button clickMeButton = findViewById(R.id.clickMeButton);
-    TextView helloBazelTextView = findViewById(R.id.helloBazelTextView);
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button clickMeButton = findViewById(R.id.clickMeButton);
+        TextView helloBazelTextView = findViewById(R.id.helloBazelTextView);
 
 //        greeterViewModel = ViewModelProviders.of(this).get(GreeterViewModel.class);
 

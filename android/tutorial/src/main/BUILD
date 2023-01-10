@@ -1,3 +1,7 @@
+package(
+    default_visibility = ["//src:__subpackages__"],
+)
+
 android_binary(
     name = "app",
     manifest = "AndroidManifest.xml",

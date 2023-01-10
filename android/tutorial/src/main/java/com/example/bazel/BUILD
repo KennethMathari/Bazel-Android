@@ -1,25 +1,30 @@
-java_library(
-    name = "java_test_deps",
-    exports = [
-        "@maven//:junit_junit",
-        "@maven//:org_hamcrest_hamcrest_library",
-    ],
+package(
+    default_visibility = ["//src:__subpackages__"],
 )
 
 android_library(
     name = "greeter_activity",
-    srcs = glob(["*.java"]),
-    visibility = ["//src:__subpackages__"],
+    srcs = [
+            "Greeter.java",
+            "GreeterViewModel.java",
+            "MainActivity.java",
+            ],
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),
+    deps = [":external_deps",],
+)
+
+android_library(
+    name ="external_deps",
     exports = [
-#            "@maven//:junit_junit",
-#            "@maven//:androidx_test_espresso_espresso_core",
-#            "@maven//:androidx_appcompat_appcompat",
-            #"@maven//:androidx_core_core",
-            "@maven//:androidx_cardview_cardview",
-            "@maven//:androidx_lifecycle_lifecycle_viewmodel",
-            "@maven//:androidx_lifecycle_lifecycle_livedata",
-#            "@maven//:com_google_android_material_material",
-        ],
+                "@maven//:androidx_lifecycle_lifecycle_runtime",
+    #            "@maven//:androidx_appcompat_appcompat",
+                #"@maven//:androidx_core_core",
+                "@maven//:androidx_cardview_cardview",
+                "@maven//:androidx_lifecycle_lifecycle_viewmodel",
+                "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
+                "@maven//:androidx_lifecycle_lifecycle_livedata",
+                "@maven//:androidx_lifecycle_lifecycle_livedata_core",
+    #            "@maven//:com_google_android_material_material",
+            ],
 )

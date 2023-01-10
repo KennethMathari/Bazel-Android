@@ -26,22 +26,25 @@ rules_jvm_external_setup()
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
+    name = "maven",
     artifacts = [
-#        "junit:junit:4.13.2",
-#        "androidx.test.espresso:espresso-core:3.4.0",
-#        "org.hamcrest:hamcrest-library:2.2",
+        "androidx.lifecycle:lifecycle-runtime:2.5.1",
         "androidx.cardview:cardview:1.0.0",
         "androidx.lifecycle:lifecycle-viewmodel:2.5.1",
         "androidx.lifecycle:lifecycle-livedata:2.5.1",
+        "androidx.lifecycle:lifecycle-livedata-core:2.5.1",
+                "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1",
 #        "androidx.appcompat:appcompat:1.5.1",
 #        "androidx.core:core:1.9.0",
 #        "com.google.android.material:material:1.6.1",
     ],
     repositories = [
+#        "https://maven.google.com",
+#        "https://dl.google.com/dl/android/maven2",
+#        "https://repo1.maven.org/maven2",
+#        "https://jcenter.bintray.com",
         "https://maven.google.com",
-        "https://dl.google.com/dl/android/maven2",
         "https://repo1.maven.org/maven2",
-        "https://jcenter.bintray.com",
     ],
     #use_credentials_from_home_netrc_file = True,
     #maven_install_json = "//:maven_install.json",
