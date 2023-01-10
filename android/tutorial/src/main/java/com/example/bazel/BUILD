@@ -12,6 +12,7 @@ android_library(
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),
     deps = [":external_deps",],
+
 )
 
 android_library(
@@ -25,6 +26,18 @@ android_library(
 #                "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
                 "@maven//:androidx_lifecycle_lifecycle_livedata",
                 "@maven//:androidx_lifecycle_lifecycle_livedata_core",
-#                "@maven//:com_google_android_material_material",
+                "@maven//:com_google_android_material_material",
             ],
 )
+
+#android_local_test(
+#    name = "greeter_activity_test",
+#    srcs = ["MainActivityTest.java"],
+#    manifest = "TestManifest.xml",
+#    test_class = "com.example.bazel.MainActivityTest",
+#    deps = [
+#        ":greeter_activity",
+#        "@maven//:org_robolectric_robolectric",
+#        "@robolectric//bazel:android-all",
+#    ],
+#)

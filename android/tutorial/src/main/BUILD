@@ -7,5 +7,7 @@ android_binary(
     manifest = "AndroidManifest.xml",
     deps = [
         "//src/main/java/com/example/bazel:greeter_activity",
+#                "@maven//:androidx_appcompat_appcompat",
+#                "@maven//:com_google_android_material_material",
             ],
 )
