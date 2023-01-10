@@ -26,7 +26,7 @@ android_library(
 #                "@maven//:androidx_lifecycle_lifecycle_viewmodel_savedstate",
                 "@maven//:androidx_lifecycle_lifecycle_livedata",
                 "@maven//:androidx_lifecycle_lifecycle_livedata_core",
-                "@maven//:com_google_android_material_material",
+#                "@maven//:com_google_android_material_material",
             ],
 )
 
