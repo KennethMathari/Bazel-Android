@@ -1,0 +1,18 @@
+package(
+    default_visibility = ["//src:__subpackages__"],
+)
+
+android_local_test(
+    name = "main_activity_test",
+    srcs = ["java/com/example/bazel/MainActivityTest.java"],
+    manifest = "AndroidManifest.xml",
+    test_class = "src.test.java.com.example.bazel.MainActivityTest",
+    deps = [
+        "//src/main/java/com/example/bazel:greeter_activity",
+        "@maven//:androidx_test_espresso_espresso_core",
+        "@maven//:org_robolectric_robolectric",
+        "@maven//:androidx_test_ext_junit",
+        "@maven//:androidx_test_core",
+        "@robolectric//bazel:android-all",
+    ],
+)

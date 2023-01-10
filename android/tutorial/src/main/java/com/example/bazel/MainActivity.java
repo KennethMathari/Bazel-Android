@@ -4,14 +4,18 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-//import androidx.lifecycle.ViewModelProvider;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import com.example.bazel.GreeterViewModel;
 
 /**
  * Main class for the Bazel Android "Hello, World" app.
  */
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
-//    private GreeterViewModel greeterViewModel;
+    private GreeterViewModel greeterViewModel;
+    Button clickMeButton = findViewById(R.id.clickMeButton);
+    TextView helloBazelTextView = findViewById(R.id.helloBazelTextView);
 
 
     @Override
@@ -19,31 +23,20 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button clickMeButton = findViewById(R.id.clickMeButton);
-        TextView helloBazelTextView = findViewById(R.id.helloBazelTextView);
+        greeterViewModel = new ViewModelProvider(this).get(GreeterViewModel.class);
+        greeterViewModel.getGreeting();
 
-//        greeterViewModel = ViewModelProviders.of(this).get(GreeterViewModel.class);
+        greeterViewModel.greeting.observe(this, greeting -> {
+            helloBazelTextView.setText(greeting);
+        });
 
-//        initObservers();
 
-    Greeter greeter = new Greeter();
+//    Greeter greeter = new Greeter();
 
         // Bazel supports Java 8 language features like lambdas!
-    clickMeButton.setOnClickListener(v ->
-            helloBazelTextView.setText(greeter.sayHello()));
+//    clickMeButton.setOnClickListener(v ->
+//            helloBazelTextView.setText(greeter.sayHello())
+//    );
     }
-
-//    private void initObservers() {
-//        final Observer<String> greetingObserver = new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable final String newGreeting) {
-//                // Update the UI, in this case, a TextView.
-//                helloBazelTextView.setText(newGreeting);
-//            }
-//        };
-//
-//        greeterViewModel.getGreeting().observe(this, greetingObserver);
-//    }
-
 
 }

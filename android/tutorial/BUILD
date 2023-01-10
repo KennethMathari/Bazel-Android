@@ -1,1 +1,0 @@
-#empty BUILD file for maven_install.json
