@@ -5,6 +5,6 @@ package com.example.bazel;
  */
 public class Greeter {
   public String sayHello() {
-    return "Test live data! \uD83D\uDC4B\uD83C\uDF31"; // Unicode for 👋🌱
+    return "Hello Bazel! \uD83D\uDC4B\uD83C\uDF31"; // Unicode for 👋🌱
   }
 }

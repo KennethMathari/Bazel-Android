@@ -15,14 +15,14 @@ http_archive(
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG,
 )
 
-http_archive(
-    name = "robolectric",
-    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.8.2.tar.gz"],
-    sha256 = "5bcde5db598f6938c9887a140a0a1249f95d3c16274d40869503d0c322a20d5d",
-    strip_prefix = "robolectric-bazel-4.8.2",
-)
-load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
-robolectric_repositories()
+#http_archive(
+#    name = "robolectric",
+#    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.8.2.tar.gz"],
+#    sha256 = "5bcde5db598f6938c9887a140a0a1249f95d3c16274d40869503d0c322a20d5d",
+#    strip_prefix = "robolectric-bazel-4.8.2",
+#)
+#load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
+#robolectric_repositories()
 
 load("@rules_jvm_external//:repositories.bzl", "rules_jvm_external_deps")
 rules_jvm_external_deps()
@@ -39,13 +39,13 @@ maven_install(
         "androidx.lifecycle:lifecycle-viewmodel:2.5.1",
         "androidx.lifecycle:lifecycle-livedata:2.5.1",
         "androidx.lifecycle:lifecycle-livedata-core:2.5.1",
-        "androidx.appcompat:appcompat:1.0.0-alpha3",
-        "com.google.android.material:material:1.0.0-alpha3",
-        "junit:junit:4.13.2",
-        "androidx.test.ext:junit:1.1.5",
-        "androidx.test:core:1.5.0",
-        "org.robolectric:robolectric:4.9.2",
-        "androidx.test.espresso:espresso-core:3.5.0-alpha07",
+#        "androidx.appcompat:appcompat:1.0.0-alpha3",
+#        "com.google.android.material:material:1.0.0-alpha3",
+#        "junit:junit:4.13.2",
+#        "androidx.test.ext:junit:1.1.5",
+#        "androidx.test:core:1.5.0",
+#        "org.robolectric:robolectric:4.9.2",
+#        "androidx.test.espresso:espresso-core:3.5.0-alpha07",
     ],
     repositories = [
 #        "https://maven.google.com",
