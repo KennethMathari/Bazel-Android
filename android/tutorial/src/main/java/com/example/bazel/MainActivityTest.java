@@ -1,7 +1,4 @@
-//package com.example.bazel;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class MainActivityTest {
-//
-//}
+package com.example.bazel;
+
+public class MainActivityTest {
+}
