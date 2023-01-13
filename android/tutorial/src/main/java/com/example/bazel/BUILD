@@ -12,7 +12,6 @@ android_library(
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),
     deps = [":external_deps",],
-
 )
 
 android_library(
