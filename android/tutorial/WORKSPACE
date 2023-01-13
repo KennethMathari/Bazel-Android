@@ -8,14 +8,14 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 RULES_JVM_EXTERNAL_TAG = "4.5"
 RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
 
-#http_archive(
-#    name = "robolectric",
-#    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.9.2.tar.gz"],
-#    sha256 = "7e007fcfdca7b7228cb4de72707e8b317026ea95000f963e91d5ae365be52d0d",
-#    strip_prefix = "robolectric-bazel-4.9.2",
-#)
-#load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
-#robolectric_repositories()
+http_archive(
+    name = "robolectric",
+    urls = ["https://github.com/robolectric/robolectric-bazel/archive/4.9.2.tar.gz"],
+    sha256 = "7e007fcfdca7b7228cb4de72707e8b317026ea95000f963e91d5ae365be52d0d",
+    strip_prefix = "robolectric-bazel-4.9.2",
+)
+load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
+robolectric_repositories()
 
 http_archive(
     name = "rules_jvm_external",
