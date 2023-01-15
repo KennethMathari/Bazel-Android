@@ -1,12 +1,11 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
 android_sdk_repository(
     name = "androidsdk",
     path = "c:/Users/TEMP.KENNETHMATHARI.001/AppData/Local/Android/Sdk",
+    api_level = 33,
+    build_tools_version = "33.0.1",
     )
-
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
-RULES_JVM_EXTERNAL_TAG = "4.5"
-RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
 
 http_archive(
     name = "robolectric",
@@ -16,6 +15,10 @@ http_archive(
 )
 load("@robolectric//bazel:robolectric.bzl", "robolectric_repositories")
 robolectric_repositories()
+
+RULES_JVM_EXTERNAL_TAG = "4.5"
+RULES_JVM_EXTERNAL_SHA = "b17d7388feb9bfa7f2fa09031b32707df529f26c91ab9e5d909eb1676badd9a6"
+
 
 http_archive(
     name = "rules_jvm_external",
@@ -32,7 +35,7 @@ rules_jvm_external_setup()
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
-#    name = "maven",
+    name = "maven",
     artifacts = [
         "androidx.lifecycle:lifecycle-runtime:2.5.1",
         "androidx.cardview:cardview:1.0.0",
@@ -40,12 +43,9 @@ maven_install(
         "androidx.lifecycle:lifecycle-livedata:2.5.1",
         "androidx.lifecycle:lifecycle-livedata-core:2.5.1",
 #        "androidx.appcompat:appcompat:1.6.0",
-#        "com.google.android.material:material:1.1.0-alpha06",
+#        "com.google.android.material:material:1.7.0",
 #        "junit:junit:4.13.2",
-#        "androidx.test.ext:junit:1.1.5",
-#        "androidx.test:core:1.5.0",
-#        "org.robolectric:robolectric:4.8.2",
-#        "androidx.test.espresso:espresso-core:3.5.0-alpha07",
+#        "org.robolectric:robolectric:4.9.2",
     ],
     repositories = [
         "https://maven.google.com",

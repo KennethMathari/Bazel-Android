@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 //import androidx.appcompat.app.AppCompatActivity;
-//import androidx.lifecycle.ViewModelProvider;
-//import com.example.bazel.GreeterViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import com.example.bazel.GreeterViewModel;
 
 /**
  * Main class for the Bazel Android "Hello, World" app.
@@ -15,8 +15,6 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 //    private GreeterViewModel greeterViewModel;
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +31,6 @@ public class MainActivity extends Activity {
 //            helloBazelTextView.setText(greeting);
 //        });
 
-
     Greeter greeter = new Greeter();
 
         // Bazel supports Java 8 language features like lambdas!
@@ -41,5 +38,4 @@ public class MainActivity extends Activity {
             helloBazelTextView.setText(greeter.sayHello())
     );
     }
-
 }
