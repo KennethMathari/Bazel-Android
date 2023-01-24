@@ -1,6 +1,4 @@
-# Bazel examples and tutorials
+# Bazel Android
+This project uses Bazel to build and Android app.
 
-A collection of examples of how to use the Bazel build system.
-
-CI:
-[![Build status](https://badge.buildkite.com/260bbace6a4067a3c60539a31fed1191d341a24cb0bfeb0e23.svg)](https://buildkite.com/bazel/bazel-bazel-examples)
+For more details on setting up the project in Windows OS, check out this [doc](https://docs.google.com/document/d/1noOi2ToDX0cw83Dw3jKqFTg-nIWgwWhZDieeSull-4g/edit?usp=sharing)
